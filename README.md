@@ -17,7 +17,7 @@ InterSystems IRIS driver for the Native API and PyODBC.
     * `odbcinst -i -d -f pyodbc_wheel/odbcinst.ini`
 
 2. Run multimodelQS.py  
-    `python multimodelQS.py `  
+    * `python multimodelQS.py `  
 
 ## Output
 
