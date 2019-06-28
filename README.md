@@ -17,7 +17,7 @@ InterSystems IRIS driver for the Native API and PyODBC.
     * `odbcinst -i -d -f pyodbc_wheel/odbcinst.ini`
 
 2. Run multimodelQS.py  
-    `python multimodelQS.py `  
+    * `python multimodelQS.py `  
 
 ## To run locally
 1. Clone the repo and open in your Python IDE.
@@ -39,7 +39,6 @@ Data is stored and retrieved using PyODBC (relationally).
 
 If you would like to see how to store data natively using Python:
 1. Find and uncomment the following lines:  
-`# iris_native = irisnative.createIris(nativeapi_connection)`  
 `# store_airfare(iris_native, "^airport")`  
 `# check_airfare(iris_native, "^airport")`   
 2. Enter departure airport: **BOS**
