@@ -180,7 +180,7 @@ def run():
     populate_airports(pyodbc_connection)
     get_airports(pyodbc_connection)
 
-    # Create an IRIS Native object
+    # Create an IRIS native object
     iris_native = irisnative.createIris(nativeapi_connection)
 
     # Uncomment the following lines to store and retrieve data natively using the Native API

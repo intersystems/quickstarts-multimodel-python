@@ -26,7 +26,6 @@ Data is stored and retrieved using PyODBC (relationally).
 
 If you would like to see how to store data natively using Python:
 1. Find and uncomment the following lines:  
-`# iris_native = irisnative.createIris(nativeapi_connection)`  
 `# store_airfare(iris_native, "^airport")`  
 `# check_airfare(iris_native, "^airport")`   
 2. Enter departure airport: **BOS**
