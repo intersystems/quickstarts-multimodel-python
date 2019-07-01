@@ -20,16 +20,28 @@ InterSystems IRIS driver for the Native API and PyODBC.
     * `python multimodelQS.py `  
 
 ## To run locally
+
 1. Clone the repo and open in your Python IDE.
 2. [Install *pyodbc* locally in your computer.](https://github.com/intersystems/quickstarts-python/blob/master/pyodbc_install.md)
 3. In `multimodelQS.py`, change username, password, IP, port and namespace to point to your instance of InterSystems IRIS
-4. In the integrated terminal, navigate to the `quickstarts-multimodel-python` directory and 
-run the following lines to install the InterSystems IRIS driver for the Native API and PyODBC.
- 
-    * `pip install nativeAPI_wheel/irisnative-1.0.0-cp34-abi3-linux_x86_64.whl`  
-    * `odbcinst -i -d -f pyodbc_wheel/odbcinst.ini`
+4. In the integrated terminal, navigate to the *quickstarts-multimodel-python* directory: `cd quickstarts-multimodel-python`
+5. Install the InterSystems IRIS driver for the Native API
 
-5. Run multimodelQS.py.  
+| Operating System | Command |
+| -- | :--: |  
+| Window | `pip install nativeAPI_wheel\irisnative-1.0.0-cp34.cp35.cp36.cp37-none-win_amd64.whl` |
+| Mac | `pip install nativeAPI_wheel/irisnative-1.0.0-cp34-abi3-macosx_10_13_x86_64.macosx_10_14_x86_64.whl`  |
+| Linux | `pip install nativeAPI_wheel/irisnative-1.0.0-cp34-abi3-linux_x86_64.whl`
+
+6. Install the InterSystems IRIS driver for PyODBC
+
+| Operating System | Command |
+| -- | :--: |  
+| Local instance | InterSystems IRIS PyODBC driver is installed. You can skip this step. |
+| Windows | `pyodbc_wheel\ODBC-2018.1.1.635.0-win_x64.exe` |
+| Mac, Linux | `odbcinst –i –d –f pyodbc_wheel/odbcinst.ini` |
+
+7. Run multimodelQS.py.  
     * `python multimodelQS.py `  
 
 ## Output
