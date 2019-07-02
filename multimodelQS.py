@@ -93,7 +93,7 @@ def populate_airports(connection):
         delete_old_table(cursor, "Demo.Airport")
         cursor.execute(create_airports)
 
-    # Inset locations into Demo.Location table in the InterSystems IRIS database
+    # Insert locations into Demo.Location table in the InterSystems IRIS database
     insert_locations = """
         Insert into Demo.Location
         (zip, city, state, longitude, latitude)
@@ -103,7 +103,7 @@ def populate_airports(connection):
         cursor.execute(insert_locations, zip.encode('utf-8'), city.encode('utf-8'), state.encode('utf-8'),
                        longitude.encode('utf-8'), latitude.encode('utf-8'))
 
-    # Inset airport into Demo.Airport table in the InterSystems IRIS database
+    # Insert airport into Demo.Airport table in the InterSystems IRIS database
     insert_airports = """
         Insert into Demo.Airport
         Select ?, ?, Demo.Location.id
@@ -159,7 +159,7 @@ def check_airfare(iris_native):
 
     # ^airport(from, to) = distance
     print("\nPrinted to {} global. The distance in miles between {} and {} is {}."
-          .format(stored_global, from_airport, to_airport, iris_native.getString("^airport", from_airport, to_airport)))
+          .format(stored_global, from_airport, to_airport, iris_native.getString(stored_global, from_airport, to_airport)))
 
     # Now loop through routes: ^airport(from, to, flight) = fare
     is_defined = iris_native.isDefined(stored_global, from_airport, to_airport)
