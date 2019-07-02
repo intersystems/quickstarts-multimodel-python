@@ -22,11 +22,11 @@ AIRPORTS = [
 
 # List of locations of the airports above
 LOCATIONS = [
-    ("02128", "Boston", "MA", '0', '0'),
-    ("19153", "Philadelphia", "PA", '0', '0'),
-    ("78719", "Austin", "TX", '0', '0'),
-    ("94128", "San Francisco", "CA", '0', '0'),
-    ("60666", "Chicago", "IL", '0', '0'),
+    ("02128", "Boston", "MA"),
+    ("19153", "Philadelphia", "PA"),
+    ("78719", "Austin", "TX"),
+    ("94128", "San Francisco", "CA"),
+    ("60666", "Chicago", "IL"),
 ] 
 
 
@@ -34,8 +34,8 @@ LOCATIONS = [
 def connect_to_iris():
     # Login credentials
     driver = "{InterSystems ODBC}"
-    ip = "localhost"
-    port = 51773
+    ip = "173.255.113.227"
+    port = 23594
     namespace = "USER"
     username = "SuperUser"
     password = "SYS"
@@ -68,9 +68,7 @@ def populate_airports(connection):
         CREATE TABLE Demo.Location(
             zip varchar(5) PRIMARY KEY, 
             city varchar(50), 
-            state varchar(50),
-            longitude varchar(50), 
-            latitude varchar(50)
+            state varchar(50)
         )
     """
     try:
@@ -96,12 +94,11 @@ def populate_airports(connection):
     # Insert locations into Demo.Location table in the InterSystems IRIS database
     insert_locations = """
         Insert into Demo.Location
-        (zip, city, state, longitude, latitude)
-        VALUES (?, ?, ?, ?, ?)
+        (zip, city, state)
+        VALUES (?, ?, ?)
     """
-    for zip, city, state, longitude, latitude in LOCATIONS:
-        cursor.execute(insert_locations, zip.encode('utf-8'), city.encode('utf-8'), state.encode('utf-8'),
-                       longitude.encode('utf-8'), latitude.encode('utf-8'))
+    for zip, city, state in LOCATIONS:
+        cursor.execute(insert_locations, zip.encode('utf-8'), city.encode('utf-8'), state.encode('utf-8'))
 
     # Insert airport into Demo.Airport table in the InterSystems IRIS database
     insert_airports = """
