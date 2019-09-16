@@ -2,7 +2,7 @@
 
 This code shows multi-model access to InterSystems IRIS Data Platform in Python.
 
-This sample is used in the [Multi-Model QuickStart](https://learning.intersystems.com/course/view.php?name=Multimodel). 
+This sample is used in the [Multi-Model QuickStart](https://gettingstarted.intersystems.com/multimodel-overview/multimodel-quickstart/). 
 It shows relational, and native access from a Python application to InterSystems IRIS. 
 Airport data is stored using objects, retrieved using SQL, and a custom data structure is created using the Native API 
 to handle route information between airports.
@@ -67,4 +67,4 @@ Other routes may be null.
 
 ## Keep Exploring
 
-To continue with another Python example with InterSystems IRIS, see the [Python QuickStart](https://learning.intersystems.com/course/view.php?name=Python%20QS).
+To continue with another Python example with InterSystems IRIS, see the [Python QuickStart](https://gettingstarted.intersystems.com/language-quickstarts/python-quickstart/).
