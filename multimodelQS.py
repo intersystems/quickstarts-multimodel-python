@@ -48,7 +48,7 @@ def connect_to_iris():
     # Connect to InterSystems IRIS using the Native API
     nativeapi_connection = irisnative.createConnection(ip, port, namespace, username, password)
 
-    print("Connected to InterSystem IRIS")
+    print("Connected to InterSystems IRIS")
     return pyodbc_connection, nativeapi_connection
 
 
