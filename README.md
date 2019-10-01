@@ -39,8 +39,8 @@ InterSystems IRIS driver for the Native API and PyODBC.
 | -- | :--: |  
 | Local instance | InterSystems IRIS PyODBC driver is installed. You can skip this step. |
 | Windows | `pyodbc_wheel\ODBC-2018.1.1.635.0-win_x64.exe` |
-| Linux | `odbcinst –i –d –f pyodbc_wheel/odbcinst.ini` |
-| Mac | `odbcinst -i -d -f pyodbc_wheel/odbcinst.ini` |
+| Linux | `odbcinst –i –d –f pyodbc_wheel/linux/odbcinst.ini` |
+| Mac | `odbcinst -i -d -f pyodbc_wheel/mac/odbcinst.ini` |
 
 7. Run multimodelQS.py.  
     * `python multimodelQS.py `  
