@@ -44,6 +44,8 @@ def connect_to_iris():
     connection_string = 'DRIVER={};SERVER={};PORT={};DATABASE={};UID={};PWD={}'\
         .format(driver, ip, port, namespace, username, password)
     pyodbc_connection = pyodbc.connect(connection_string)
+    pyodbc_connection.setdecoding(pyodbc.SQL_CHAR, encoding='utf-8')
+    pyodbc_connection.setencoding(encoding='utf-8')
 
     # Connect to InterSystems IRIS using the Native API
     nativeapi_connection = irisnative.createConnection(ip, port, namespace, username, password)
