@@ -155,7 +155,7 @@ def check_airfare(iris_native):
     to_airport = input("Enter destination airport: (e.g. AUS)")
 
     # ^airport(from, to) = distance
-    print("\nPrinted to {} global. The distance in miles between {} and {} is {}."
+    print("\nRetrieved from {} global. The distance in miles between {} and {} is {}."
           .format(stored_global, from_airport, to_airport, iris_native.getString(stored_global, from_airport, to_airport)))
 
     # Now loop through routes: ^airport(from, to, flight) = fare
