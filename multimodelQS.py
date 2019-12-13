@@ -162,7 +162,7 @@ def check_airfare(iris_native):
 
     # Now loop through routes: ^airport(from, to, flight) = fare
     is_defined = iris_native.isDefined(stored_global, from_airport, to_airport)
-    if is_defined == 11 or is_defined == 1:
+    if is_defined == 11:
         print("The following routes exist for this path:")
         iterator = iris_native.iterator(stored_global, from_airport, to_airport)
         for flight_number, fare in iterator:
