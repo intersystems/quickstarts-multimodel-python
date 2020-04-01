@@ -130,8 +130,7 @@ def get_airports(connection):
 
 
 # Create a custom data structure to store airport distance and airfare information in a graph-like structure.
-def store_airfare(iris_native):
-    stored_global = "^airport"
+def store_airfare(iris_native, stored_global):
     # Store distance, routes, and airfares between airports
     iris_native.set("1698", stored_global, "BOS", "AUS")
     iris_native.set("450", stored_global, "BOS", "AUS", "AA150")
@@ -148,8 +147,7 @@ def store_airfare(iris_native):
 
 
 # Simple interactive method using IRIS native API to consult the data structure populated in storeAirfare()
-def check_airfare(iris_native):
-    stored_global = "^airport"
+def check_airfare(iris_native, stored_global):
     # Prompt for input
     from_airport = input("Enter departure airport: (e.g. BOS)")
     to_airport = input("Enter destination airport: (e.g. AUS)")
@@ -181,8 +179,8 @@ def run():
     iris_native = irisnative.createIris(nativeapi_connection)
 
     # Uncomment the following lines to store and retrieve data natively using the Native API
-    # store_airfare(iris_native)
-    # check_airfare(iris_native)
+    # store_airfare(iris_native, "^airport")
+    # check_airfare(iris_native, "^airport")
 
 
 if __name__ == '__main__':
