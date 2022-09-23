@@ -33,7 +33,7 @@ LOCATIONS = [
 # Connect to InterSystems IRIS
 def connect_to_iris():
     # Login credentials
-    driver = "{InterSystems ODBC}"
+    driver = "{InterSystems IRIS ODBC35}"
     ip = "localhost"
     port = 51773
     namespace = "USER"
