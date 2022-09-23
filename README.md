@@ -23,7 +23,7 @@ InterSystems IRIS driver for the Native API and PyODBC.
 
 1. Clone the repo and open in your Python IDE.
 2. [Install *pyodbc* locally in your computer.](https://github.com/intersystems/quickstarts-python/blob/master/pyodbc_install.md)
-3. In `multimodelQS.py`, change username, password, IP, port and namespace to point to your instance of InterSystems IRIS
+3. In `multimodelQS.py`, on lines 37-41 change username, password, IP, port and namespace to point to your instance of InterSystems IRIS
 4. In the integrated terminal, navigate to the *quickstarts-multimodel-python* directory: `cd quickstarts-multimodel-python`
 5. Install the InterSystems IRIS driver for the Native API
 
