@@ -1,3 +1,3 @@
 # Multi-Model QuickStart for Python Code Sample
 
-Instructions for the *[Multi-Model QuickStart for Python](https://gettingstarted.intersystems.com/multimodel-overview/multimodel-quickstart/#tryitpython)* are available on GettingStarted.InterSystems.com.
+Instructions for *[trying multi-model](https://learning.intersystems.com/course/view.php?name=Multimodel)* are available on learning.intersystems.com.
