@@ -37,8 +37,8 @@ def connect_to_iris():
     ip = "localhost"
     port = 51773
     namespace = "USER"
-    username = "SuperUser"
-    password = "SYS"
+    username = "tech"
+    password = "demo"
 
     # Connect to InterSystems IRIS using PyODBC
     connection_string = 'DRIVER={};SERVER={};PORT={};DATABASE={};UID={};PWD={}'\
